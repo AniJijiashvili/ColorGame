@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="tools">
+            <div class=live>
+                <p class="live_p">3</p>
+                <img src="img/360_F_320352822_Du18cSR0okuxVfYKgQIYYU794iqjQRAU.jpg">
+                
+            </div>
+            <div class="guess_info">
+                <p class="score">Score: 0 </p>
+                <p class="guess_color">Guess color: None </p>
+
+            </div>
+           
+
+            <div class="btns">
+                <button class="easy" onclick="generate(3)">Easy</button>
+                <button class="medium" onclick="generate(6)">Medium</button>
+                <button class="hard" onclick="generate(9)">Hard</button>
+            </div>
+            <div class="rule">
+                <button class="reset" onclick="document.getElementById('id01').style.display='block'"> Reset</button>
+                <button class="swap">Swap</button>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+
+        </div>
+        <div id="id01">
+            <div class="reset-container-container">
+                <div class="reset_div">
+                    <img src="img/ex.gif">
+                    <div class="reset-container">
+                        <h2>Are you sure?</h2>
+                        <p>you won't be able to revert this!</p>
+                        <div class="btns_click">
+                                <button class="reset_btn"  onclick="cancelBtn2()">Yes,
+                                reset it</button>
+                                
+                            <button class="cancel"
+                                onclick="document.getElementById('id02').style.display='block'">Cancel</button>
+                        </div>
+                    </div>
+    
+                </div>
+
+            </div>
+           
+
+        </div>
+        <div id="id02">
+            <div class="reset-container-container">
+                <div class="reset_div2">
+                    <div class="f-modal-alert">
+    
+                        <div class="f-modal-icon f-modal-warning scaleWarning">
+                            <span class="f-modal-body pulseWarningIns"></span>
+                            <span class="f-modal-dot pulseWarningIns"></span>
+                        </div>
+    
+                    </div>
+    
+                    <div class="reset-container2">
+                        <h2>Nothing happend</h2>
+                        <p>your game was not reseted</p>
+    
+                        <button class="cancel_btn" onclick="cancelBtn()">ok</button>
+    
+                    </div>
+    
+                </div>
+
+            </div>
+            
+
+        </div>
+        <div id="id03">
+         
+            <div class="reset-container-container">
+                <div class="reset_div2">
+                    <div class="wrapper"> <svg class="animated-check" viewBox="0 0 24 24">
+                            <path d="M4.1 12.7L9 17.6 20.3 6.3" fill="none" />
+                        </svg>
+                    </div>
+                    <div class="reset-container2">
+                        <h2>Reseted!</h2>
+                        <p>your game was reseted.</p>
+                        <!-- <button class="resetlast_btn" onclick="cancelBtn2()">ok</button> -->
+                        <button class="resetlast_btn" onclick="cancelBtn6()">ok</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div id="id04">
+            <div class="reset-container-container">
+                <div class="reset_div2">
+                    <div class="f-modal-alert">
+    
+                        <div class="f-modal-icon f-modal-warning scaleWarning">
+                            <span class="f-modal-body pulseWarningIns"></span>
+                            <span class="f-modal-dot pulseWarningIns"></span>
+                        </div>
+    
+                    </div>
+                    <div class="reset-container2">
+                        <h2>Wrong mode</h2>
+                        <p>pick at least one mode!</p>
+    
+                        <button class="resetlast_btn" onclick="cancelBtn3()">ok</button>
+    
+                    </div>
+    
+                </div>
+    
+
+            </div>
+            
+        </div>
+        <div id="id05">
+            <div class="reset-container-container">
+                <div class="reset_div2">
+
+                    <div class="wrapper">
+                        <svg class="animated-check" viewBox="0 0 24 24">
+                            <path d="M4.1 12.7L9 17.6 20.3 6.3" fill="none" />
+                        </svg>
+                    </div>
+
+                    <div class="reset-container2">
+                        <h2>Correct</h2>
+                        <p>congrats</p>
+
+                        <button class="resetlast_btn" onclick="cancelBtn4()">ok</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div id="id06">
+            <div class="reset-container-container">
+                <div class="reset_div6">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                        <circle class="path circle" fill="none" stroke="#D06079" stroke-width="10"
+                            stroke-miterlimit="10" cx="65.1" cy="65.1" r="57.1" />
+                        <line class="path line" fill="none" stroke="#D06079" stroke-width="10" stroke-linecap="round"
+                            stroke-miterlimit="10" x1="34.4" y1="37.9" x2="95.8" y2="92.3" />
+                        <line class="path line" fill="none" stroke="#D06079" stroke-width="10" stroke-linecap="round"
+                            stroke-miterlimit="10" x1="95.8" y1="38" x2="34.4" y2="92.2" />
+                    </svg>
+
+
+                    <path fill="#c8e6c9" d="M44,24c0,11-9,20-20,20S4,35,4,24S13,4,24,4S44,13,44,24z"></path>
+                    <polyline fill="none" stroke="#4caf50" stroke-miterlimit="10" stroke-width="4"
+                        points="14,24 21,31 36,16"></polyline>
+                    </svg>
+
+                    <div class="reset-container2">
+                        <h2>Wrong</h2>
+                        <p>try again</p>
+
+                        <button class="resetlast_btn" onclick="cancelBtn5()">ok</button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <div id="id07">
+            <div class="reset-container-container">
+                <div class="reset_div7">
+                    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmZ1czUxbDJudGJpb2dsdXEzYWR3aGozbHZ4aXFyb3hkYWkzMDV4aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eJ4j2VnYOZU8qJU3Py/giphy.gif">
+                    <div class="reset-container7">
+                        
+                        <button class="playAgain" onclick="cancelBtn7()">play again</button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <div id="id08">
+            <div class="reset-container-container">
+                <div class="reset_div8">
+                    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWduMW5sM2RxZ3BkcWx1ZjVob3RwenI4cHhwaXBwaHpjam1qZTVlbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1xNDVX4DV6B5vo6unw/giphy.gif">
+                    <p>Congratulations! you achieved 100 score </p>
+                    <div class="reset-container8">
+                        
+                        <button class="nextLevel" onclick="nextLevel()">play next level</button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <div id="id09">
+            <div class="reset-container-container">
+                <div class="reset_div9">
+                    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXFodDk3ZmE2b3o4YXhtaWM3ZzZ0N3JhMjdkc28wNmNiOXdlaWJhciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/X9izlczKyCpmCSZu0l/giphy.gif">
+                    <p>You achieved 200 score in hard level </p>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div id="id10">
+            <div class="reset-container-container">
+                <div class="reset_div8">
+                    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWduMW5sM2RxZ3BkcWx1ZjVob3RwenI4cHhwaXBwaHpjam1qZTVlbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1xNDVX4DV6B5vo6unw/giphy.gif">
+                    <p>Congratulations! you achieved 50 score </p>
+                    <div class="reset-container8">
+                        
+                        <button class="nextLevel" onclick="nextLevel()">play next level</button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
